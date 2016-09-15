@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for article in articles %}
+<div class = "article">
+    <div class = "title">
+        <a href = "{% url 'BlogGetDetail' article.id %}">
+            <h2> {{ article.title }} </h2>
+        </a>
+    </div>
+
+    <div class = "info">
+        <span class = "category" style = "color: #ff9900;">
+            {{ article.category.name }}
+        </span>
+
+        <span class = "author" style = "color: #4a86e8">
+            {{ article.author }}
+        </span>
+
+        <span class = "createTime" style = "color: #6aa84f">
+            {{ article.createTime | date:"Y-m-d H:i" }}
+        </span>
+    </div>
+
+    <div class = "summary">
+        {{ article.content | truncatewords:100 }}
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}

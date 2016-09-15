@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <meta charset = "UTF-8">
+    <title> Article </title>
+
+    <style type = "text/css">
+        .article {
+            padding: 20px, 0px;
+        }
+
+        .article .info {
+            padding-right: 10px;
+        }
+
+        .article.summary {
+            padding-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+{% include "header.html" %}
+
+{% block content %} {% endblock %}
+
+{% include "footer.html" %}
+
+</body>
+
+</html>

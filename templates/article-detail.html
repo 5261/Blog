@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class = "detail">
+    <div class = "article">
+        <div class = "title">
+            <a href = "#">
+                <h2> {{ article.title }} </h2>
+            </a>
+        </div>
+    
+        <div class = "info">
+            <span class = "category" style = "color: #ff9900;">
+                {{ article.category.name }}
+            </span>
+    
+            <span class = "author" style = "color: #4a86e8">
+                {{ article.author }}
+            </span>
+    
+            <span class = "createTime" style = "color: #6aa84f">
+                {{ article.createTime | date:"Y-m-d H:i" }}
+            </span>
+        </div>
+    
+        <div class = "content">
+            {{ article.content}}
+        </div>
+    </div>
+    
+    <div class = "comment">
+        <div class = "comment-display" style = "padding-top: 20px;">
+            <h3> Comments </h3>
+            {% for comment in comments %}
+                <div class = "comment-field" style = "padding-top: 10px;">
+                    {{ comment.name }} said: "{{ comment.content }}"
+                </div>
+            {% endfor %}
+        </div>
+        
+        <div class  ="comment-post">
+            <h3> Make a comment </h3>
+            <form action = "{% url 'BlogGetDetail' article.id %}" method = "post">
+                {% csrf_token %}
+                {% for field in form %}
+                    <div class = "input-feild" style = "padding-top: 10px;">
+                        {{ field.label }} : {{ field }}
+                    </div>
+                    <div class = "error">
+                        {{ field.errors }}
+                    </div>
+                {% endfor %}
+                <button type = "submit" style = "margin-top: 10px"> Submit </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
