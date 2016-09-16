@@ -1,0 +1,12 @@
+.article {
+    padding: 20px, 0px;
+}
+
+.article .info {
+    padding-right: 10px;
+}
+
+.article .summary {
+    padding-top: 20px;
+}
+
