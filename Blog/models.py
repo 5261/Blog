@@ -7,9 +7,21 @@ from django.contrib import admin
 
 class Category(models.Model):
     name = models.CharField("Name", max_length = 16)
+    
+    def __str__(self):
+        return self.name
+
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ['name']
 
 class Tag(models.Model):
     name = models.CharField("Name", max_length = 16)
+    
+    def __str__(self):
+        return self.name
+
+class TagAdmin(admin.ModelAdmin):
+    list_display = ['name']
 
 class Article(models.Model):
     title = models.CharField("Title", max_length = 32)
@@ -20,8 +32,11 @@ class Article(models.Model):
     category = models.ForeignKey(Category, verbose_name = "Category")
     tags = models.ManyToManyField(Tag, verbose_name = "Tag")
     
+    def __str__(self):
+        return self.title + ' - ' + self.author
+
 class ArticleAdmin(admin.ModelAdmin):
-    list_display = ("title", "createTime")
+    list_display = ['title', 'author', 'createTime', 'category']
 
 class Comment(models.Model):
     article = models.ForeignKey(Article, verbose_name = "Artile")
@@ -31,3 +46,9 @@ class Comment(models.Model):
     content = models.CharField("Content", max_length = 140)
 
     createTime = models.DateTimeField("CreateTime", auto_now_add = True)
+
+    def __str__(self):
+        return self.name
+
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ['name', 'email', 'article', 'createTime']
