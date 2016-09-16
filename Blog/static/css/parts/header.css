@@ -1,0 +1,32 @@
+#BlogNav {
+    background-color: #2ca6cb;
+}
+
+#BlogNav ul{
+    list-style: none;
+}
+
+
+#BlogNav ul li{
+    float: left;
+    text-align: center;
+}
+
+#BlogNav a.NavLink{
+    display: block;
+
+    text-decoration: none;
+
+    height: 30px;
+    line-height: 30px;
+    width: 100px;
+    margin-bottom: 1px;
+
+    background-color: #2CA6CB;
+    color: #FFFFFF;
+}
+
+#BlogNav a.NavLink:hover{
+    background-color: #1B7F9E;
+    color: #E9CD4C;
+}

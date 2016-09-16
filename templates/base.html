@@ -9,22 +9,14 @@
     
     <title> Hellc </title>
     
-    <link rel = "stylesheet" type = "text/css" href = "{% static 'css/main.css' %}" />
-<!--
-    <style>
-        body{
-            background-color: blue;
-        }
+    <!-- <link rel = "stylesheet" type = "text/css" href = "{% static 'css/main.css' %}" /> -->
 
-    </style>
--->
+    {% include "parts/mainStyle.html" %}
 </head>
 
 <body>
 
 {% include "header.html" %}
-
-<p>Url Test:</p>
 
 {% block content %} {% endblock %}
 
