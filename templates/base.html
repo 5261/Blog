@@ -1,17 +1,30 @@
 <!DOCTYPE html>
+
 <html>
+
+{% load static %}
     
 <head>
     <meta charset = "UTF-8">
     
     <title> Hellc </title>
     
-    <link style = "text/css" href = "../static/style.css" />
+    <link rel = "stylesheet" type = "text/css" href = "{% static 'css/main.css' %}" />
+<!--
+    <style>
+        body{
+            background-color: blue;
+        }
+
+    </style>
+-->
 </head>
 
 <body>
 
 {% include "header.html" %}
+
+<p>Url Test:</p>
 
 {% block content %} {% endblock %}
 
