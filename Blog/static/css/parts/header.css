@@ -1,9 +1,10 @@
 #BlogNav {
-    background-color: #2ca6cb;
+    ;
 }
 
 #BlogNav ul{
     list-style: none;
+    height: 30px;
 }
 
 
@@ -20,7 +21,6 @@
     height: 30px;
     line-height: 30px;
     width: 100px;
-    margin-bottom: 1px;
 
     background-color: #2CA6CB;
     color: #FFFFFF;
