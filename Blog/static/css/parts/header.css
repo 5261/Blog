@@ -25,9 +25,13 @@
 
 #BlogMotto h2{
     font-size: 200%;
+<<<<<<< HEAD
     color: #FFFFFF;
     font-family: "Microsoft YaHei", Georgia, 'Times New Roman', Times, 'Songti SC', SimSun, serif;
     
+=======
+    font-family: "Microsoft YaHei", Georgia, 'Times New Roman', Times, 'Songti SC', SimSun, serif;
+>>>>>>> 7a9f314f483c856bbde7fca5c8418425252ad826
 }
 
 #BlogNav {
@@ -49,6 +53,11 @@
 #BlogNav a.NavLink{
     display: block;
 
+<<<<<<< HEAD
+=======
+    text-decoration: none;
+
+>>>>>>> 7a9f314f483c856bbde7fca5c8418425252ad826
     height: 40px;
     line-height: 40px;
     width: 100px;
