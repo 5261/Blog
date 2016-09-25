@@ -1,9 +1,22 @@
+{% load static %}
+
 <header id = "PageHeader">
 
     <div id = "BlogHeader">
-        <div id = "BlogLogo"> Logo </div>
-        <div id = "BlogName"> Hellc </div>
-        <div id = "BlogMotto"> Motto </div>
+        <div id = "BlogImgLogo">
+            <img src = "{% static 'img/HellcLogo.jpg'%}" alt = "Hellc"/>
+        </div>
+        
+        <div id = "BlogTextLogo">
+            <div id = "BlogName">
+                <h1> Hellc </h1>
+            </div>
+            
+            <div id = "BlogMotto">
+                <h2> Fly in the blue and free sky. </h2>
+            </div>
+        </div>
+        
     </div>
 
     <nav id = "BlogNav">

@@ -1,16 +1,47 @@
+#PageHeader{
+    background: #2CA6CB;
+    padding-top: 40px;
+    padding-left: 40px;
+}
+
+#BlogHeader{
+    overflow: hidden;
+}
+
+#BlogTextLogo{
+    float: left;
+    margin-left: 10px;
+}
+
+#BlogImgLogo{
+    float: left;
+}
+
+#BlogName h1{
+    font-size: 280%;
+    color: #FFFFFF;
+    font-family: "Microsoft YaHei", Georgia, 'Times New Roman', Times, 'Songti SC', SimSun, serif;
+}
+
+#BlogMotto h2{
+    font-size: 200%;
+    font-family: "Microsoft YaHei", Georgia, 'Times New Roman', Times, 'Songti SC', SimSun, serif;
+}
+
 #BlogNav {
-    ;
+    overflow: hidden;
 }
 
 #BlogNav ul{
     list-style: none;
-    height: 30px;
+    
+    float: right;
 }
 
-
 #BlogNav ul li{
-    float: left;
     text-align: center;
+    
+    float: left;
 }
 
 #BlogNav a.NavLink{
@@ -18,12 +49,15 @@
 
     text-decoration: none;
 
-    height: 30px;
-    line-height: 30px;
+    height: 40px;
+    line-height: 40px;
     width: 100px;
 
     background-color: #2CA6CB;
     color: #FFFFFF;
+    
+    font-family: Georgia;
+    font-size: 20px;
 }
 
 #BlogNav a.NavLink:hover{
