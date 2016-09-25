@@ -1,3 +1,64 @@
-.articles{
+.Articles{
     border: 1px solid red;
+    margin: 30px;
+}
+
+.Articles .Article{
+    background-color: #FFFFFF;
+    border: 1px solid blue;
+    
+    margin: 15px;
+    padding: 10px;
+}
+
+.Articles .Article .Summary{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+    padding: 10px;
+    
+    border: 1px solid purple;
+}
+
+.ArticleHeader{
+    overflow: hidden;
+}
+
+.ArticleHeader .Title a{
+    font-family: "Microsoft YaHei", Georgia, 'Times New Roman', Times, 'Songti SC', SimSun, serif;
+    
+    color: #000000;
+}
+
+.ArticleHeader .Title a:hover{
+    color: #0085FF;
+}
+
+.ArticleHeader .Info{
+    float: right;
+}
+
+.ArticleHeader .Info .Category{
+    color: #FF9900;
+}
+
+.ArticleHeader .Info .Author{
+    color: #4A86E8;
+}
+
+.ArticleHeader .Info .CreateTime{
+    color: #6AA84F;
+}
+
+.ArticleFooter{
+    overflow: hidden;
+}
+
+.ArticleFooter .ReadMore{
+    color: #777777;
+    float: right;
+}
+
+.ArticleFooter .ReadMore:hover{
+    color: #0085FF;
 }

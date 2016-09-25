@@ -2,39 +2,41 @@
 
 {% block content %}
 
-<div class = "articles">
+<div class = "Articles">
     {% for article in articles %}
-    <div class = "article">
-        <header class = "articleHeader">
-            <div class = "title">
-                <a href = "{% url 'BlogGetDetail' article.id %}">
-                    <h2> {{ article.title }} </h2>
-                </a>
+    <article class = "Article">
+        <header class = "ArticleHeader">
+            <div class = "Title">
+                <h1>
+                    <a href = "{% url 'BlogGetDetail' article.id %}">
+                        {{ article.title }}
+                    </a>
+                </h1>
             </div>
         
-            <div class = "info">
-                <span class = "category" style = "color: #ff9900;">
+            <div class = "Info">
+                <span class = "Category">
                     {{ article.category.name }}
                 </span>
         
-                <span class = "author" style = "color: #4a86e8">
+                <span class = "Author">
                     {{ article.author }}
                 </span>
         
-                <span class = "createTime" style = "color: #6aa84f">
+                <span class = "CreateTime">
                     {{ article.createTime | date:"Y-m-d H:i" }}
                 </span>
             </div>
         </header>
     
-        <div class = "summary">
+        <div class = "Summary">
             {{ article.content | truncatewords:100 }}
         </div>
         
-        <footer class = "articleFooter">
-            <a href = "#"> Read More </a>
+        <footer class = "ArticleFooter">
+            <a href = "{% url 'BlogGetDetail' article.id %}" class = "ReadMore"> Read More </a>
         </footer>
-    </div>
+    </article>
     {% endfor %}
 </div>
 
