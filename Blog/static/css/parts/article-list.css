@@ -7,8 +7,32 @@
     background-color: #FFFFFF;
     border: 1px solid blue;
     
-    margin: 15px;
+    margin: 20px;
     padding: 10px;
+    
+    /*box-shadow: 5px 5px 5px #888888;*/
+    border-radius: 8px;
+    position: relative;
+}
+
+.Articles .Article:before {
+    transform: skew(-15deg) rotate(-6deg);
+    left: 15px;
+}
+
+.Articles .Article:after {
+    transform: skew(15deg) rotate(6deg);
+    right: 15px;
+}
+
+.Articles .Article:before, .Articles .Article:after {
+    width: 50%;
+    height: 20%;
+    content: ' ';
+    box-shadow: 0 15px 15px rgba(0,0,0,0.7);
+    position: absolute;
+    bottom: 40px;
+    z-index: -1; 
 }
 
 .Articles .Article .Summary{
