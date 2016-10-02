@@ -10,3 +10,8 @@ body{
 a{
     text-decoration: none;
 }
+
+#Content{
+    padding: 30px;
+    overflow: hidden;
+}

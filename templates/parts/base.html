@@ -14,9 +14,10 @@
 
 {% include "parts/header.html" %}
 
-{% block content %} {% endblock %}
-
-{% include "parts/sidebar.html"%}
+<div id = "Content">
+    {% block content %} {% endblock %}
+    {% include "parts/sidebar.html"%}
+</div>
 
 {% include "parts/footer.html" %}
 

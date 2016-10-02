@@ -20,14 +20,14 @@
 #BlogName h1{
     font-size: 280%;
     color: #FFFFFF;
-    font-family: "Microsoft YaHei", Georgia, 'Times New Roman', Times, 'Songti SC', SimSun, serif;
+    font-family: "consolas", "Ubuntu Mono", "Microsoft YaHei", Georgia, 'Times New Roman', Times, 'Songti SC', SimSun, serif;
 }
 
 #BlogMotto h2{
     font-size: 200%;
 
     color: #FFFFFF;
-    font-family: "Microsoft YaHei", Georgia, 'Times New Roman', Times, 'Songti SC', SimSun, serif;
+    font-family: "consolas", "Ubuntu Mono", "Microsoft YaHei", Georgia, 'Times New Roman', Times, 'Songti SC', SimSun, serif;
 }
 
 #BlogNav {

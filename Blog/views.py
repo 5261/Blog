@@ -5,12 +5,14 @@ from .forms import CommentForm
 
 # Create your views here.
 
-from .models import Article, Comment
+from .models import Article, Comment, Tag
 
 def getArticles(request):
     ctx = {
-        "articles" : Article.objects.all().order_by("-createTime")
+        "articles" : Article.objects.all().order_by("-createTime"),
+        "tags" : Tag.objects.all()
     }
+
     return render(request, 'article-list.html', ctx)
 
 def getDetail(request, articleId):
