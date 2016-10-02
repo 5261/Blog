@@ -2,6 +2,8 @@
     background: #2CA6CB;
     padding-top: 40px;
     padding-left: 40px;
+    padding-bottom: 10px;
+    box-shadow: 1px 3px 10px rgba(0,0,0,0.7);
 }
 
 #BlogHeader{
@@ -15,6 +17,10 @@
 
 #BlogImgLogo{
     float: left;
+}
+
+#BlogImgLogo img{
+    width: 5.5em;
 }
 
 #BlogName h1{

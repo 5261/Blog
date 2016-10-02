@@ -1,14 +1,15 @@
 #Sidebar{
-    border: 1px solid black;
     width: 22%;
-
     float: right;
+    background: #FFFFFF;
+    box-shadow: 1px 2px 3px #BBBBBB;
 }
 
-#Tags{
-    border: 1px solid green;
-
-    padding: 10px;
+#Sidebar .title{
+    font-family: "consolas", "Ubuntu Mono", "Microsoft YaHei", Georgia, 'Times New Roman', Times, 'Songti SC', SimSun, serif;
+    
+    border-bottom: 1px solid #DDDDDD;
+    padding: 15px;
 }
 
 #Tags .EachTag{

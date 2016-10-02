@@ -1,18 +1,16 @@
 #Articles{
-    border: 1px solid red;
-
     width: 75%;
     float: left;
 }
 
 #Articles .Article{
     background-color: #FFFFFF;
-    border: 1px solid blue;
+    box-shadow: 0px 1px 2px #BBBBBB;
     
-    margin: 20px;
+    margin-bottom: 40px;
     padding: 10px;
     
-    border-radius: 8px;
+    border-radius: 5px;
     
     position: relative;
 }
@@ -29,11 +27,11 @@
 
 #Articles .Article:before, #Articles .Article:after {
     width: 50%;
-    height: 20%;
+    height: 30%;
     content: ' ';
     box-shadow: 0 15px 15px rgba(0,0,0,0.7);
     position: absolute;
-    bottom: 40px;
+    bottom: 38px;
     z-index: -1; 
 }
 
@@ -42,8 +40,6 @@
     margin-bottom: 10px;
     
     padding: 10px;
-    
-    border: 1px solid purple;
 }
 
 .ArticleHeader{
