@@ -1,5 +1,5 @@
 {% extends "parts/base.html" %}
-
+{% load markdownRender %}
 {% block content %}
 
 <div class = "detail">
@@ -25,7 +25,7 @@
         </div>
     
         <div class = "content">
-            {{ article.content}}
+            {{ article.content | markdownRender}}
         </div>
     </div>
     

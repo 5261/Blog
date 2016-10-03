@@ -1,4 +1,5 @@
 {% extends "parts/base.html" %}
+{% load markdownRender %}
 
 {% block content %}
 
@@ -30,7 +31,7 @@
         </header>
     
         <div class = "Summary">
-            {{ article.content | truncatewords:100 }}
+            {{ article.content | markdownRender }}
         </div>
         
         <footer class = "ArticleFooter">

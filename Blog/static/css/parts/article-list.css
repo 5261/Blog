@@ -36,14 +36,15 @@
 }
 
 #Articles .Article .Summary{
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-left: 10px;
     
     padding: 10px;
 }
 
 .ArticleHeader{
+    border-bottom: 1px solid #DDDDDD;
     overflow: hidden;
+    padding: 3px;
 }
 
 .ArticleHeader .Title a{
@@ -73,6 +74,8 @@
 }
 
 .ArticleFooter{
+    border-top: 1px solid #DDDDDD;
+    margin-top: 10px;
     overflow: hidden;
 }
 
