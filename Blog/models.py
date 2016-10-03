@@ -52,3 +52,13 @@ class Comment(models.Model):
 
 class CommentAdmin(admin.ModelAdmin):
     list_display = ['name', 'email', 'article', 'createTime']
+
+class FriendLink(models.Model):
+    name = models.CharField("Name", max_length = 16)
+    link = models.URLField("Link")
+    
+    def __str__(self):
+        return self.name
+
+class FriendLinkAdmin(admin.ModelAdmin):
+    list_display = ['name', 'link']

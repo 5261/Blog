@@ -1,12 +1,24 @@
 <aside id = "Sidebar">
     <div id = "Tags">
-        <h3 class = title>
+        <h3 class = "title">
             Tags
         </h3>
 
         {% for tag in tags %}
         <div class = "EachTag">
-            {{ tag.name }}
+            <a href = "#"> {{ tag.name }} </a>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <div id = "FriendLinks">
+        <h3 class = "title">
+            Friends
+        </h3>
+        
+        {% for friendLink in friendLinks%}
+        <div class = "EachFriendLink">
+            <a href = "{{ friendLink.link}}" target = "_blank"> {{ friendLink.name }} </a>
         </div>
         {% endfor %}
     </div>
