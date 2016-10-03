@@ -30,7 +30,7 @@ class Article(models.Model):
     createTime = models.DateTimeField("CreateTime", auto_now_add = True)
 
     category = models.ForeignKey(Category, verbose_name = "Category")
-    tags = models.ManyToManyField(Tag, verbose_name = "Tag")
+    tags = models.ManyToManyField(Tag, verbose_name = "Tag", related_name = "articles")
     
     def __str__(self):
         return self.title + ' - ' + self.author

@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
-from Blog.views import getArticles, getDetail
+from Blog.views import getArticles, getDetail, getArticlesByTag
 
 import settings
 
@@ -27,5 +27,5 @@ urlpatterns = [
     
     url(r'^detail/(\d+)/$', getDetail, name = "BlogGetDetail"),
 
-    # url(r'^static/(?P<path>.*)$', include('django.views.static.serve'), { 'document_root' : settings.STATIC_URL }),
+    url(r'^tag/(\w+)$', getArticlesByTag, name = "BlogGetArticlesByTag"),
 ]
