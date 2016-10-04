@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 
+{% load static %}
+
 <html>
 
 <head>
@@ -7,7 +9,12 @@
     
     <title> Hellc </title>
     
-    {% include "parts/mainStyle.html" %}
+    <link rel = "stylesheet" type = "text/css" href = "{% static 'css/main.css' %}" />
+    <link rel = "stylesheet" type = "text/css" href = "{% static 'css/parts/header.css' %}" />
+    <link rel = "stylesheet" type = "text/css" href = "{% static 'css/parts/sidebar.css' %}" />
+    <link rel = "stylesheet" type = "text/css" href = "{% static 'css/parts/footer.css' %}" />
+
+    {% block style %} {% endblock %}
 </head>
 
 <body>

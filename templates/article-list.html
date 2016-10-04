@@ -1,5 +1,12 @@
 {% extends "parts/base.html" %}
 {% load markdownRender %}
+{% load static %}
+
+{% block style %}
+
+<link rel = "stylesheet" type = "text/css" href = "{% static 'css/article-list.css' %}" />
+
+{% endblock %}
 
 {% block content %}
 

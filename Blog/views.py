@@ -55,4 +55,4 @@ def getArticlesByTag(request, tagName):
         "articles" : articles
     })
     
-    return render(request, "article-list.html", ctx)
+    return render(request, "article-list-of-oneTag.html", ctx)

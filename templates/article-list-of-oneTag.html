@@ -1,0 +1,20 @@
+{% extends "parts/base.html" %}
+{% load static %}
+
+{% block style %}
+    <link rel = "stylesheet" type = "text/css" href = "{% static 'css/article-list-of-oneTag.css' %}" />
+{% endblock %}
+
+{% block content%}
+
+<div id = "Articles">
+    {% for article in articles %}
+    <div class = "ArticleItem">
+        <a href = "{% url 'BlogGetDetail' article.id %}" target = "_blank">
+            {{ article.title }}
+        </a>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
