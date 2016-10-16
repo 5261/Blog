@@ -12,6 +12,11 @@ a{
     color: #0085FF;
 }
 
+#Wrapper{
+    width: 75%;
+    float: left;
+}
+
 #Content{
     padding: 30px;
     overflow: hidden;

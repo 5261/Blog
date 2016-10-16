@@ -9,9 +9,10 @@
     
     <title> Hellc </title>
     
-    <link rel = "stylesheet" type = "text/css" href = "{% static 'css/parts/main.css' %}" />
+    <link rel = "stylesheet" type = "text/css" href = "doNotExist.css" /> <!-- I don't kown why the first css will be lost, but I can only add a empty one. -->
     <link rel = "stylesheet" type = "text/css" href = "{% static 'css/parts/header.css' %}" />
     <link rel = "stylesheet" type = "text/css" href = "{% static 'css/parts/sidebar.css' %}" />
+    <link rel = "stylesheet" type = "text/css" href = "{% static 'css/parts/main.css' %}" />
     <link rel = "stylesheet" type = "text/css" href = "{% static 'css/parts/footer.css' %}" />
 
     {% block style %} {% endblock %}
@@ -22,7 +23,9 @@
 {% include "parts/header.html" %}
 
 <div id = "Content">
-    {% block content %} {% endblock %}
+    <div id = Wrapper>
+        {% block content %} {% endblock %}
+    </div>
     {% include "parts/sidebar.html"%}
 </div>
 
