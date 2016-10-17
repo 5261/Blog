@@ -38,21 +38,6 @@ class Article(models.Model):
 class ArticleAdmin(admin.ModelAdmin):
     list_display = ['title', 'author', 'createTime', 'category']
 
-class Comment(models.Model):
-    article = models.ForeignKey(Article, verbose_name = "Artile")
-
-    name = models.CharField("Name", max_length = 16)
-    email = models.EmailField("Email")
-    content = models.CharField("Content", max_length = 140)
-
-    createTime = models.DateTimeField("CreateTime", auto_now_add = True)
-
-    def __str__(self):
-        return self.name
-
-class CommentAdmin(admin.ModelAdmin):
-    list_display = ['name', 'email', 'article', 'createTime']
-
 class FriendLink(models.Model):
     name = models.CharField("Name", max_length = 16)
     link = models.URLField("Link")
