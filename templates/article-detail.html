@@ -25,7 +25,14 @@
     </div>
     
     <footer class = "ArticleFooter">
-        
+        <div class = "Tags">
+            Tags: 
+            {% for tag in article.tags.all %}
+            <span class = "EachTag">
+                <a href = "{% url 'BlogGetArticlesByTag' tag.name %}"> {{ tag.name }} </a>
+            </span>
+            {% endfor %}
+        </div>
     </footer>
     
 </article>

@@ -6,12 +6,26 @@
     background-color: #FFFFFF;
     box-shadow: 0px 1px 2px #BBBBBB;
 
-    padding: 10px;
+    padding: 25px;
     
     border-radius: 5px;
 }
 
-.ArticleHeader .Title{
+.ArticleHeader{
+    border-bottom: 1px solid #DDDDDD;
+
+    margin-bottom: 20px;
+}
+
+.ArticleHeader .Title a{
+    color: #000000;
+    
     font-family: "consolas", "Ubuntu Mono", "Microsoft YaHei", Georgia, 'Times New Roman', Times, 'Songti SC', SimSun, serif;
 }
 
+.ArticleFooter{
+    border-top: 1px solid #DDDDDD;
+    
+    margin-top: 15px;
+    padding-top: 15px;
+}
