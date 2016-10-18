@@ -8,7 +8,7 @@ from django.contrib import admin
 class Category(models.Model):
     name = models.CharField("Name", max_length = 16)
     
-    def __str__(self):
+    def __unicode__(self):
         return self.name
 
 class CategoryAdmin(admin.ModelAdmin):
@@ -17,7 +17,7 @@ class CategoryAdmin(admin.ModelAdmin):
 class Tag(models.Model):
     name = models.CharField("Name", max_length = 16)
     
-    def __str__(self):
+    def __unicode__(self):
         return self.name
 
 class TagAdmin(admin.ModelAdmin):
@@ -32,7 +32,7 @@ class Article(models.Model):
     category = models.ForeignKey(Category, verbose_name = "Category")
     tags = models.ManyToManyField(Tag, verbose_name = "Tag", related_name = "articles")
     
-    def __str__(self):
+    def __unicode__(self):
         return self.title + ' - ' + self.author
 
 class ArticleAdmin(admin.ModelAdmin):
@@ -42,7 +42,7 @@ class FriendLink(models.Model):
     name = models.CharField("Name", max_length = 16)
     link = models.URLField("Link")
     
-    def __str__(self):
+    def __unicode__(self):
         return self.name
 
 class FriendLinkAdmin(admin.ModelAdmin):
