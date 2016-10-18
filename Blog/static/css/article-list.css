@@ -21,12 +21,12 @@
 }
 
 #Articles .Article:before, #Articles .Article:after {
-    width: 50%;
-    height: 30%;
+    width: 100px;
+    height: 100px;
     content: ' ';
     box-shadow: 0 15px 15px rgba(0,0,0,0.7);
     position: absolute;
-    bottom: 38px;
+    bottom: 15px;
     z-index: -1; 
 }
 
