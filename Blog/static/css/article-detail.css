@@ -11,3 +11,7 @@
     border-radius: 5px;
 }
 
+.ArticleHeader .Title{
+    font-family: "consolas", "Ubuntu Mono", "Microsoft YaHei", Georgia, 'Times New Roman', Times, 'Songti SC', SimSun, serif;
+}
+

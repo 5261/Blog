@@ -1,0 +1,67 @@
+.Markdown h1, h2, h3, h4, h5, h6{
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.Markdown h1{
+    font-size: 32px;
+}
+
+.Markdown h2{
+    font-size: 24px;
+}
+
+.Markdown h3{
+    font-size: 20px;
+}
+
+.Markdown h4{
+    font-size: 16px;
+}
+
+.Markdown h5{
+    font-size: 14px;
+}
+
+.Markdown h6{
+    font-size: 12px;
+}
+
+.Markdown hr {
+    background-color: #DDDDDD;
+    height: 1px;
+    border: 0;
+    
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.Markdown p{
+    margin-bottom: 15px;
+}
+
+.Markdown ul{
+    list-style-type: circle;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.Markdown blockquote{
+    padding-left: 1em;
+    color: #777777;
+    border-left: 0.25em solid #DDDDDD;
+}
+
+.Markdown p code{
+    color: #E2678F;
+    background-color: #FBEDEB;
+    margin: 1px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.Markdown pre{
+    background-color: #FFFFFF;
+    padding: 10px;
+    border: 1.5px solid #DDDDDD;
+}

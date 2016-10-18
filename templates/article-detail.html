@@ -5,6 +5,7 @@
 {% block style %}
 
 <link rel = "stylesheet" type = "text/css" href = "{% static 'css/article-detail.css' %}" />
+<link rel = "stylesheet" type = "text/css" href = "{% static 'css/parts/markdown.css' %}" />
 
 {% endblock %}
 
@@ -19,7 +20,7 @@
         </div>
     </header>
     
-    <div class = "ArticleBody">
+    <div class = "ArticleBody Markdown">
         {{ article.content | markdownRender}}
     </div>
     
