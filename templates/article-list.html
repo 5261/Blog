@@ -1,4 +1,5 @@
 {% extends "parts/base.html" %}
+{% load trunc %}
 {% load markdownRender %}
 {% load static %}
 
@@ -47,7 +48,7 @@
         </header>
     
         <div class = "Summary Markdown">
-            {{ article.content | markdownRender }}
+            {{ article.content | trunc | markdownRender }}
         </div>
         
         <footer class = "ArticleFooter">
