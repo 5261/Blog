@@ -9,6 +9,6 @@
 
 #PageFooter p{
     color: #000000;
-    font-family: "Ubuntu mono";
+    font-family: "Ubuntu mono", "Georgia";
     padding: 10px;
 }
