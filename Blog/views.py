@@ -43,6 +43,7 @@ def getArticlesByTag(request, tagName):
     
     ctx = getBaseContent()
     ctx.update({
+        "tag" : tag, 
         "articles" : articles
     })
     

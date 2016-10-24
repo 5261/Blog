@@ -3,13 +3,21 @@
 
 {% block style %}
     <link rel = "stylesheet" type = "text/css" href = "{% static 'css/article-list-of-oneTag.css' %}" />
+    <link rel = "stylesheet" type = "text/css" href = "{% static 'css/parts/FontAwesome/css/font-awesome.css' %}" />
 {% endblock %}
 
 {% block content%}
 
 <div id = "Articles">
+    <header class = "ArticlesHeader">
+         <i class = "icon fa fa-tag"></i>
+        {{ tag.name }}
+    </header>
     {% for article in articles %}
     <div class = "ArticleItem">
+        <header class = "ArticleItemHeader">
+            {{ article.createTime | date:"Y-m-d" }}
+        </header>
         <a href = "{% url 'BlogGetDetail' article.id %}" target = "_blank">
             {{ article.title }}
         </a>

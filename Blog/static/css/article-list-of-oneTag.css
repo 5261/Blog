@@ -1,0 +1,20 @@
+#Articles{
+    background-color: #FFFFFF;
+    box-shadow: 1px 2px 3px #BBBBBB;
+    
+    padding: 10px;
+}
+
+#Articles .ArticleItem{
+    margin: 20px;
+    /* border: 1px solid black;  */
+}
+
+#Articles .ArticleItem a{
+    font-size: 25px;
+}
+
+#Articles .ArticleItem .ArticleItemHeader{
+    color: #000000;
+    font-size: 10px;
+}
