@@ -44,23 +44,10 @@ class Spider:
         doc = BeautifulSoup(html, "html5lib")
 
         link = doc.find_all("a")
-        css = doc.find_all("link")
-        img = doc.find_all("img")
-        script = doc.find_all("scipt")
-
         for each in link:
             url = each.get("href")
             if url != "/" and url != "#":
                 self.getPage(url)
-
-        for each in css:
-            self.getFile(each.get("href"))
-
-        for each in img:
-            self.getImg(each.get("src"))
-
-        for each in script:
-            self.getFile(each.get("src"))
 
     def getPage(self, url):
         succeeded, req = self.tryToDownload(url)
@@ -72,22 +59,6 @@ class Spider:
         
         self.getNext(html)
 
-    def getFile(self, url):
-        succeeded, req = self.tryToDownload(url)
-        if not succeeded:
-            return 
-        
-        content = req.text
-        self.store(url, content)
-        
-    def getImg(self, url):
-        succeeded, req = self.tryToDownload(url)
-        if not succeeded:
-            return 
-        
-        content = req.content
-        self.store(url, content, "wb")
-    
     def clone(self, url, path):
         self.rootUrl = url
         self.rootPath = path
