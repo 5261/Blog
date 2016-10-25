@@ -1,0 +1,14 @@
+ {% extends 'parts/base.html' %}
+
+{% block content %}
+
+<div id = "Tags">
+    {% for tag in tags %}
+    <div class = "eachTag">
+        {{ tag.name }}
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
+

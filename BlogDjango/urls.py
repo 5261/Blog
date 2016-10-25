@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
-from Blog.views import getArticles, getDetail, getArticlesByTag
+from Blog.views import getArticles, getDetail, getArticlesByTag, getTags
 
 import settings
 
@@ -28,4 +28,6 @@ urlpatterns = [
     url(r'^detail/(?P<articleId>(\d+))/$', getDetail, name = "BlogGetDetail"),
 
     url(r'^tag/(\w+)/$', getArticlesByTag, name = "BlogGetArticlesByTag"),
+    
+    url(r'^tags/$', getTags, name = "BlogGetTags")
 ]

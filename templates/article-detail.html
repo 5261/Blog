@@ -4,6 +4,7 @@
 
 {% block style %}
 
+<link rel = "stylesheet" type = "text/css" href = "{% static 'css/parts/FontAwesome/css/font-awesome.css' %}" />
 <link rel = "stylesheet" type = "text/css" href = "{% static 'css/article-detail.css' %}" />
 <link rel = "stylesheet" type = "text/css" href = "{% static 'css/parts/markdown.css' %}" />
 <link rel = "stylesheet" type = "text/css" href = "{% static 'css/parts/highlight.css' %}" />
@@ -34,6 +35,7 @@
     
     <footer class = "ArticleFooter">
         <div class = "Tags">
+            <i class = "fa fa-tags"></i>
             Tags: 
             {% for tag in article.tags.all %}
             <span class = "EachTag">
