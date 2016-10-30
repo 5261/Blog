@@ -48,12 +48,3 @@ def getArticlesByTag(request, tagName):
     })
     
     return render(request, "article-list-of-oneTag.html", ctx)
-
-def getTags(request):
-    ctx = getBaseContent()
-    ctx.update({
-        "tags" : Tag.objects.all()
-    })
-
-    return render(request, 'tag-list.html', ctx)
-
