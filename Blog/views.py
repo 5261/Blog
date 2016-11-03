@@ -20,6 +20,14 @@ def getArticles(request):
 
     return render(request, 'article-list.html', ctx)
 
+def getArchive(request):
+    ctx = getBaseContent()
+    ctx.update({
+        "articles" : Article.objects.all().order_by("-createTime"),
+    })
+    
+    return render(request, 'article-archive.html', ctx)
+
 def getDetail(request, articleId):
     try:
         article = Article.objects.get(id = articleId)

@@ -1,0 +1,44 @@
+#Archive{
+    border: 1px black solid;
+    padding: 10px;
+    background-color: #FFFFFF;
+}
+
+.TimeLine{
+    margin: 20px;
+    border-left: 3px #ECEFF2 solid;
+}
+
+.TimeLineItem{
+    border: 2px red solid;
+    margin: 10px;
+    padding: 10px;
+}
+
+.TimeLineNode{
+    background-color: #38B7EA;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    margin-left: -29.5px;
+    float: left;
+}
+
+.TimeLineItemMajor{
+    border: 2px blue solid;
+    font-size: 30px;
+}
+
+.TimeLineNodeMajor{
+    width: 20px;
+    height: 20px;
+    margin-left: -33.5px;
+    font-size: 10px;
+    color: #FFFFFF;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.TimeLineNodeMajor .fa{
+    vertical-align: middle;
+}

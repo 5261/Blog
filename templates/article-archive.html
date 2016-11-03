@@ -1,0 +1,39 @@
+{% extends 'parts/base.html' %}
+{% load static %}
+
+{% block style %}
+<link rel = "stylesheet" type = "text/css" href = "{% static 'css/article-archive.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div>
+
+这个页面还没写完...目前为坑...
+
+请忽视测试用的 border
+
+</div>
+<div id = "Archive">
+    <div class = "TimeLine">
+        <div class = "TimeLineItem TimeLineItemMajor">
+            <div class = "TimeLineNode TimeLineNodeMajor">
+                <i class = "fa fa-calendar"></i>
+            </div>
+            2016
+        </div>
+        {% for article in articles %}
+        <div class = "TimeLineItem">
+            <div class = "TimeLineNode"></div>
+            <div class = "ArticleTitle">
+                {{ article.title }}
+            </div>
+            <footer class = "TimeLineItemFooter">
+                <span class = "ArticleTime">
+                    {{ article.createTime | date:"Y-m-d H:i" }}
+                </span>
+            </footer>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
