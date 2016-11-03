@@ -16,12 +16,13 @@ class CategoryAdmin(admin.ModelAdmin):
 
 class Tag(models.Model):
     name = models.CharField("Name", max_length = 16)
+    permalink = models.SlugField("Link", max_length = 50, null = True)
     
     def __unicode__(self):
         return self.name
 
 class TagAdmin(admin.ModelAdmin):
-    list_display = ['name']
+    list_display = ['name', 'permalink']
 
 class Article(models.Model):
     title = models.CharField("Title", max_length = 32)

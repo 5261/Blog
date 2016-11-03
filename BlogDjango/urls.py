@@ -27,7 +27,7 @@ urlpatterns = [
     
     url(r'^detail/(?P<articleId>(\d+))/$', getDetail, name = "BlogGetDetail"),
 
-    url(r'^tag/(\w+)/$', getArticlesByTag, name = "BlogGetArticlesByTag"),
+    url(r'^tag/(\S+)/$', getArticlesByTag, name = "BlogGetArticlesByTag"),
 
     url(r'^archive/$', getArchive, name = "BlogGetArchive")
 ]

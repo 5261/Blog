@@ -41,9 +41,9 @@ def getDetail(request, articleId):
     
     return render(request, "article-detail.html", ctx)
 
-def getArticlesByTag(request, tagName):
+def getArticlesByTag(request, tagLink):
     try:
-        tag = Tag.objects.get(name = tagName)
+        tag = Tag.objects.get(permalink = tagLink)
     except Tag.DoesNotExist:
         return Http404
     
