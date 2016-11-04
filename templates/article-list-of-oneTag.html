@@ -17,7 +17,7 @@
         <header class = "ArticleItemHeader">
             {{ article.createTime | date:"Y-m-d" }}
         </header>
-        <a href = "{% url 'BlogGetDetail' article.id %}" target = "_blank">
+        <a href = "{% url 'BlogGetDetail' article.permalink %}" target = "_blank">
             {{ article.title }}
         </a>
     </div>

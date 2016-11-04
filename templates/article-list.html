@@ -26,7 +26,7 @@
         <header class = "ArticleHeader">
             <div class = "Title">
                 <h1>
-                    <a href = "{% url 'BlogGetDetail' article.id %}">
+                    <a href = "{% url 'BlogGetDetail' article.permalink %}">
                         {{ article.title }}
                     </a>
                 </h1>
@@ -52,7 +52,7 @@
         </div>
         
         <footer class = "ArticleFooter">
-            <a href = "{% url 'BlogGetDetail' article.id %}" class = "ReadMore"> Read More </a>
+            <a href = "{% url 'BlogGetDetail' article.permalink %}" class = "ReadMore"> Read More </a>
         </footer>
     </article>
     {% endfor %}

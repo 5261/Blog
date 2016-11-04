@@ -28,9 +28,9 @@ def getArchive(request):
     
     return render(request, 'article-archive.html', ctx)
 
-def getDetail(request, articleId):
+def getDetail(request, articleLink):
     try:
-        article = Article.objects.get(id = articleId)
+        article = Article.objects.get(permalink = articleLink)
     except Article.DoesNotExist:
         return Http404
     
