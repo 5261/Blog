@@ -35,7 +35,7 @@ class Article(models.Model):
     title = models.CharField("Title", max_length = 100)
     author = models.CharField("Author", max_length = 16)
     content = models.TextField("Content")
-    createTime = models.DateTimeField("CreateTime", auto_now_add = True)
+    createTime = models.DateTimeField("CreateTime")
     
     permalink = models.SlugField("Link", null = True)
 
