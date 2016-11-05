@@ -1,18 +1,48 @@
 #Archive{
-    border: 1px black solid;
-    padding: 10px;
+    padding: 25px;
+    
     background-color: #FFFFFF;
+    box-shadow: 1px 2px 3px #BBBBBB;
+}
+
+.ArchiveHeader{
+    font-size: 30px;
+}
+
+.ArchiveHeader .Icon{
+    color: #38B7EA;
 }
 
 .TimeLine{
-    margin: 20px;
+    margin-left: 10px;
     border-left: 3px #ECEFF2 solid;
+    
+    position: relative;
 }
 
 .TimeLineItem{
-    border: 2px red solid;
-    margin: 10px;
-    padding: 10px;
+    margin: 20px;
+    padding: 20px;
+    
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 2px #BBBBBB;
+    
+    border-top: 0.5px #EEEEEE solid;
+    border-left: 0.5px #EEEEEE solid;
+    
+    /* border: 1px #BBBBBB solid; */
+}
+
+.TimeLineItem::before{
+    content: "";
+    box-shadow: -1px 1px 1px #CCCCCC;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 15.5px;
+    z-index: 1;
+    background-color: #FFFFFF;
 }
 
 .TimeLineNode{
@@ -20,25 +50,22 @@
     border-radius: 50%;
     width: 12px;
     height: 12px;
-    margin-left: -29.5px;
-    float: left;
+    
+    position: absolute;
+    
+    left: -7px;
 }
 
-.TimeLineItemMajor{
-    border: 2px blue solid;
-    font-size: 30px;
-}
-
-.TimeLineNodeMajor{
-    width: 20px;
-    height: 20px;
-    margin-left: -33.5px;
+.TimeLineItemFooter{
+    margin-top: 15px;
     font-size: 10px;
-    color: #FFFFFF;
-    text-align: center;
-    vertical-align: middle;
+    color: #898D92;
 }
 
-.TimeLineNodeMajor .fa{
-    vertical-align: middle;
+.TimeLineItemFooter a{
+    color: #898D92;
+}
+
+.TimeLineItemFooter a:hover{
+    color: #0085FF;
 }
