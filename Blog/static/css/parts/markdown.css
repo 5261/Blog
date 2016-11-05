@@ -1,4 +1,4 @@
-.Markdown h1, h2, h3, h4, h5, h6{
+.Markdown h1, .Markdown h2, .Markdown h3, .Markdown h4, .Markdown h5, .Markdown h6{
     font-weight: 600;
     margin-bottom: 24px;
 }
