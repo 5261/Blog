@@ -15,6 +15,18 @@
 <script type = "text/javascript" src = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type = "text/x-mathjax-config"> MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
 
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"hellc"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+</script>
+	
 {% endblock %}
 
 {% block content %}
@@ -43,6 +55,10 @@
             {% endfor %}
         </div>
     </footer>
-    
 </article>
+
+<div class = "Comment">
+    <div class = "ds-thread" data-thread-key = "{{ article.permalink }}" data-title = "{{ article.title }}" data-url = "{% url 'BlogGetDetail' article.permalink %}"></div>
+</div>
+
 {% endblock %}
