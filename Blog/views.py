@@ -5,6 +5,12 @@ from django.http import Http404
 # Create your views here.
 
 from .models import Article, Tag, FriendLink
+from django.conf import settings
+
+def globalVariable(request):
+    return {
+        "SITE_URL" : settings.SITE_URL
+    }
 
 def getBaseContent():
     return {
