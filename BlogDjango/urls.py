@@ -16,14 +16,16 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
-from Blog.views import getArticles, getDetail, getArticlesByTag, getArchive, getAboutPage
+from Blog.views import getDetail, getArticlesByTag, getArchive, getAboutPage, getArticleList
 
 import settings
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     
-    url(r'^$', getArticles, name = "BlogGetArticles"),
+    url(r'^$', getArticleList, name = "BlogGetHomePage"),
+    
+    url(r'^page/(?P<pageNum>(\d+))/$', getArticleList, name = "BlogGetArticleList"),
     
     url(r'^article/(?P<articleLink>(\S+))/$', getDetail, name = "BlogGetDetail"),
 

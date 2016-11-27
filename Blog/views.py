@@ -7,6 +7,10 @@ from django.http import Http404
 from .models import Article, Tag, FriendLink, SinglePage
 from django.conf import settings
 
+from django.core.paginator import Paginator
+from django.core.paginator import PageNotAnInteger
+from django.core.paginator import EmptyPage
+
 def globalVariable(request):
     return {
         "SITE_URL" : settings.SITE_URL
@@ -18,12 +22,31 @@ def getBaseContent():
         "friendLinks" : FriendLink.objects.all()
     }
 
-def getArticles(request):
+def getAllArticles(request):
     ctx = getBaseContent()
     ctx.update({
         "articles" : Article.objects.all().order_by("-createTime"),
     })
 
+    return render(request, 'article-list.html', ctx)
+
+def getArticleList(request, pageNum = 1):
+    ctx = getBaseContent()
+    
+    allArticles = Article.objects.all().order_by("-createTime")
+    pages = Paginator(allArticles, 10)
+
+    try:
+        articles = pages.page(pageNum)
+    except PageNotAnInteger:
+        articles = pages.page(1)
+    except EmptyPage:
+        articles = pages.page(pages.num_pages)
+    
+    ctx.update({
+        "articles" : articles,
+    })
+    
     return render(request, 'article-list.html', ctx)
 
 def getArchive(request):

@@ -56,6 +56,34 @@
         </footer>
     </article>
     {% endfor %}
+    
+    <footer class = "ArticlesFooter">
+        <nav class = "PageNav">
+            {% if articles.has_previous %}
+                <a class = "PageNavLink Prev" href = "{% url 'BlogGetArticleList' articles.previous_page_number %}">
+                    Prev
+                </a>
+            {% endif %}
+            
+            {% for pageNum in articles.paginator.page_range %}
+                {% ifequal pageNum articles.number %}
+                    <span class = "PageNavLink Curr">
+                        {{ pageNum }}
+                    </span>
+                {% else %}
+                    <a class = "PageNavLink" href = "{% url 'BlogGetArticleList' pageNum %}">
+                        {{ pageNum }}
+                    </a>
+                {% endifequal %}
+            {% endfor %}
+            
+            {% if articles.has_next %}
+                <a class = "PageNavLink Next" href = "{% url 'BlogGetArticleList' articles.next_page_number %}">
+                    Next
+                </a>
+            {% endif %}
+        </nav>
+    </footer>
 </div>
 
 {% endblock %}
