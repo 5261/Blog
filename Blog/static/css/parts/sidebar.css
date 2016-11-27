@@ -12,8 +12,14 @@
     padding: 15px;
 }
 
-#Tags .EachTag{
+#Tags .TagLinks{
     margin: 10px;
+    overflow: hidden;
+}
+
+#Tags .TagLinks .EachTag{
+    margin: 3px;
+    float: left;
 }
 
 #FriendLinks .EachFriendLink{

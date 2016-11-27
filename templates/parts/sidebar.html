@@ -4,11 +4,13 @@
             Tags
         </h3>
 
+        <div class = "TagLinks">
         {% for tag in tags %}
-        <div class = "EachTag">
-            <a href = "{% url 'BlogGetArticlesByTag' tag.permalink %}"> {{ tag.name }} </a>
-        </div>
+            <div class = "EachTag">
+                <a href = "{% url 'BlogGetArticlesByTag' tag.permalink %}"> {{ tag.name }} </a>
+            </div>
         {% endfor %}
+        </div>
     </div>
     
     <div id = "FriendLinks">
