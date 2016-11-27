@@ -57,3 +57,11 @@ class FriendLink(models.Model):
 
 class FriendLinkAdmin(admin.ModelAdmin):
     list_display = ['name', 'link']
+
+class SinglePage(models.Model):
+    title = models.CharField("Title", max_length = 100)
+    content = models.TextField("Content")
+    permalink = models.SlugField("Permalink")
+
+class SinglePageAdmin(admin.ModelAdmin):
+    list_display = ['title', 'permalink']

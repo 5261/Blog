@@ -4,7 +4,7 @@ from django.http import Http404
 
 # Create your views here.
 
-from .models import Article, Tag, FriendLink
+from .models import Article, Tag, FriendLink, SinglePage
 from django.conf import settings
 
 def globalVariable(request):
@@ -62,3 +62,11 @@ def getArticlesByTag(request, tagLink):
     })
     
     return render(request, "article-list-of-oneTag.html", ctx)
+
+def getAboutPage(request):
+    ctx = getBaseContent()
+    ctx.update({
+        "about" : SinglePage.objects.get(permalink = "about")
+    })
+    
+    return render(request, "single-page/about.html", ctx)

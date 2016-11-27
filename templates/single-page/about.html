@@ -1,0 +1,49 @@
+{% extends "parts/base.html" %}
+{% load markdownRender %}
+{% load static %}
+
+{% block style %}
+
+<link rel = "stylesheet" type = "text/css" href = "{% static 'css/parts/markdown.css' %}" />
+<link rel = "stylesheet" type = "text/css" href = "{% static 'css/parts/highlight.css' %}" />
+<link rel = "stylesheet" type = "text/css" href = "{% static 'css/single-page/about.css'%}" />
+
+{% endblock %}
+
+{% block script %}
+
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"hellc"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+</script>
+
+{% endblock %}
+
+{% block content %}
+<article class = "About">
+    
+    <header class = "AboutHeader">
+        <div class = "Title">
+            <a href = "#">
+                <h2> {{ about.title }} </h2>
+            </a>
+        </div>
+    </header>
+    
+    <div class = "AboutBody Markdown">
+        {{ about.content | markdownRender}}
+    </div>
+</article>
+
+<div class = "Comment">
+    <div class = "ds-thread" data-thread-key = "{{ about.permalink }}" data-title = "{{ about.title }}" data-url = "{{ SITE_URL }}{% url 'BlogGetAboutPage'%}"></div>
+</div>
+
+{% endblock %}
