@@ -19,12 +19,6 @@ class Tag(models.Model):
     name = models.CharField("Name", max_length = 16)
     permalink = models.SlugField("Link", max_length = 50, null = True)
     
-    def save(self, *args, **kwargs):
-        if not self.id:
-            self.permalink = urlquote(self.name)
-    
-        super(Tag, self).save(*args, **kwargs)
-    
     def __unicode__(self):
         return self.name
 
